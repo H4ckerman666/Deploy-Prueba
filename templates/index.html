@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get_capture</title>
+</head>
+<body>
+    
+    <h1>webcam with js</h1>
+    <video id="video" width="640" height="480" autoplay></video>
+    <canvas id="canvas" class="canvas-wrapper"></canvas>
+    <h2>webcam with flask</h2>
+    <img src=" {{ url_for('video_feed') }} " alt="">
+</body>
+
+<script src="{{url_for('static', filename='main.js')}}"></script>
+
+<style>
+    /*Hide canvas*/
+    #canvas {
+        display: none !important;
+    }
+</style>
+</html>
