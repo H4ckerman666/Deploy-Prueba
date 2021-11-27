@@ -11,7 +11,8 @@ def get_frame(entrada):
         min_detection_confidence=0.5,
         min_tracking_confidence=0.5) as face_mesh:
 
-            image = cv2.imdecode(entrada, cv2.IMREAD_COLOR)
+            image = entrada
+            cv2.imwrite('avr.jpg',image)
             # Flip the image horizontally for a later selfie-view display, and convert
             # the BGR image to RGB.
             image = cv2.cvtColor(cv2.flip(image, 1), cv2.COLOR_BGR2RGB)
